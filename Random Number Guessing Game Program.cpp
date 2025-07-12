@@ -10,11 +10,12 @@ int main()
     
     // Random number engine
     random_device engine;
+
     uniform_int_distribution<> dist(1, 1000);
 
     int rand_num = dist(engine);
 
-    int input;
+    int input; // value that the user puts in
     int count = 0;
 
     cout<< "A random number has been generated. Can you guess it? \n";
@@ -35,9 +36,11 @@ int main()
             cout << "Too low, try again. \n";
         }
 
+        cin >> input;
+
     }
 
-    cout << "Congradulations, you got the number correct! \n";
+    cout << "Congratulations, you got the number correct! \n";
     cout << "It took " << count << " attempts.";
 
     
